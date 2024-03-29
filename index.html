@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!--Home-->
+    <div class="container">
+        <div class="glass-container">
+            <nav class="navbar">
+                <div class="logo">My Portfolio</div>
+                <ul class="nav-links">
+                    <li class="nav-link"><a href="#">Home</a></li>
+                    <li class="nav-link"><a href="https://github.com/TheOutCast2020">Github</a></li>
+                    <li class="nav-link"><a href="#about">About</a></li>
+                </ul>
+            </nav>
+            <div class="content">
+                <div class="main">
+                    <h2>Hello!👋, <br>My name is Huy</h2>
+                    <p>
+                        I'm a beginner Coder with skill in HTML,CSS,Javascript and Python.
+                        <br>
+                        You can learn more about me in my bio.
+                        </ul>
+                    </p>
+                    <button onclick="goToP('about')">Let's Get Started</button>
+                </div>
+                <div> 
+                    <div class="image-wrapper">
+                        <img src="Picture/Selfie.jpg" alt="Rocket png"> <!--Add an image-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--Bio-->
+    <div class="container">
+        <div class="glass-container">
+            <div class="bio">
+                <h1 id="about">About</h1>
+                <h2>Who am I?</h2>
+                <p>
+                    My full name is Mai Quốc Huy.
+                    I am a 20 years old Vietnamese collage student. Currently majoring in Accounting. 👨‍💼
+                </p>
+                <h2>My Skills?</h2>
+                <p>
+                    I began my journey in coding in 2021 starting with the basics in Python, the back-end, front-end, the works v.v...
+                    Currently I'm dabbing into web design through HTML,CSS and some Javascript which lead to me to here now.
+                    <br> 
+                    Over those two years I learn by scouring the web for lessons and information.
+                    In that time I was able to learn the fundamental all 4 languages that I have currently.
+                </p>
+                <h2>My goals for the future?</h2>
+                <p>
+                    I'm hoping to expand my skills, whether it be in data analysis using Python or Web design using HTML,CSS and Javascript.
+                    <br>
+                    I hope to have the chance to get to showcase to you the best projects that I can make. But until then please check out my catalog of current projects. :>
+                </p>
+
+                <button onclick="goToP('projects')">Check out my projects</button>
+            </div>
+        </div>
+    </div>
+
+<!--Projects-->
+    <div class="container">
+        <div class="glass-container">
+            <div id="projects">
+                <h2>My projects</h2>
+                <ul class="Project-list" id="projects-list">
+                    <li class="Project active"><a href="#CalendarwithTask"><img class="image-wrapper project-img" src="Picture/Calendar.png" alt="Calendar"></a></li>
+                    <li class="Project"><a href="#Chat-Room"><img class="image-wrapper project-img" src="Picture/ChatRoom.png" alt="Chat-Room"></a></li>
+                    <li class="Project"><a href="#calculator"><img class="image-wrapper project-img" src="Picture/Calculator.png" alt="Calculator"></a></li>
+                    <li class="Project"><a href="#Wiki-Searcher"><img class="image-wrapper project-img" src="Picture/Wiki Searcher.png" alt="Wiki Search"></a></li>
+                    <!--<li class="Project"><a href="#"><img class="image-wrapper project-img" src="" alt="Snake Game"></a></li>
+                    <li class="Project"><a href="#"><img class="image-wrapper project-img" src="" alt="Chess"></a></li>-->
+                </ul>
+                <div class="dots">
+                    <button class="active" onclick="dot(1)"></button>
+                    <button onclick="dot(2)"></button>
+                    <button onclick="dot(3)"></button>
+                    <button onclick="dot(4)"></button>
+                    <!--<button onclick="dot(5)"></button>
+                    <button onclick="dot(6)"></button>-->
+                </div>
+                <button class="slider-btn" id="next" onclick="nextslide()">&gt</button>
+                <button class="slider-btn" id="prev" onclick="prevslide()">&lt</button>
+            </div>
+        </div>
+    </div>
+
+<!--Calendar-->
+<div class="container">
+    <div class="glass-container">
+        <h2>Calendar with a Task planner</h2>
+        <div id="CalendarwithTask">
+            <div class="planner">
+                <div class="title">
+                    <button class="change" id="left" onclick="prevmonth()">&larr;</button>
+                    <h1 id="year"></h1>
+                    <button class="change" id="right" onclick="nextmonth()">&rarr;</button>
+                </div>
+                <div id="calendar" class="calendar-grid"></div>
+            </div>
+
+            <button id="show" class="add-task-btn" onclick="showAddTaskMode()"Add Task>Add Task Mode</button>
+
+            <div id="addTaskMode" class="mode">
+                <div class="mode-content">
+                    <span class="close" onclick="closeAddTaskMode()">&times;</span>
+                    <h2>Add Task</h2>
+                    <input type="date" id="task-date">
+                    <input type="text" id="task-desc" placeholder="Task Description">
+                    <button onclick="addTask()">Add Task</button>
+                </div>
+            </div>
+
+            <script src="Project Scripts/calendar.js"></script>
+
+        </div>
+
+        <br>
+        <h1>Thoughts:</h1>
+        <p>
+            Surprisingly for just a simple Calendar this was probably my second most complicated project beside the snake game.
+            In order to just make the calendar it self I had to play around with the date function in javascript, it took a while to figure out how to change to the calendar of different month.
+            I'm quite proud of that.
+        </p>
+        <p>
+            It wasn't that hard to code a way to set a task or plan to a specific date.
+            It's mostly about knowing how to set an 'if statement' variable to that date and then setting some function to add and delete the task.
+            Despite that there's still some bugs that I still haven't figure out despite debugging for hours.
+            Specifically the bug where you add a task it will duplicate that task to the same day in each month and year.
+            Though it will correct itself once you add a second task to it then you have to same problem with the second task.
+        </p>
+        <p>
+            I AM going to find a way to fix that.
+            Once it is fixed then this project will be, well not 100% perfect but at least 100% functional.
+        </p>
+    </div>
+</div>
+
+<!--Chat room-->
+    <div class="container">
+        <div class="glass-container">
+            <h2>Basic Chat Room</h2>
+            <div id="Chat-Room">
+                <div id="Chatbox"></div>
+                <br>
+                <header class="Chat-box">
+                    <input type="text" id="message">
+                    <button class="sent" onclick="sendMessage()">></button>
+                </header>
+            </div>
+
+            <script src="Project Scripts/chatbox.js"></script>
+
+            <br>
+            <h1>Thoughts:</h1>
+            <p>
+                This was my first web-based project that has any real relevance in the website-world.
+                It's pretty simple and primitive, just a box with a simple sent button.
+                Nothing more nothing less.
+            </p>
+            <p>
+                Despite this I'm still very proud of this project.
+            </p>
+            <p>
+                I hope I'll have the chance to come back to this and improve it, I can already know a few way this can be improve.
+                Like having a database for example so you can see if anyone left any message.
+            </p>
+        </div>
+    </div>
+
+<!--Calculator-->
+    <div class="container">
+        <div class="glass-container">
+            <h2>Calculator</h2>
+            <div id="calculator">
+                <header class="cal-bar"></header>
+                <div class="calc-button">
+                    <div class="num-grid">
+                        <div class="button delete"><button>C</button></div>
+                        <div class="button operate" id="plus-minus"><button>+/-</button></div>
+                        <div class="button operate" id="percentage"><button>%</button></div>
+                        <div class="button number" id="btn7"><button>7</button></div>
+                        <div class="button number" id="btn8"><button>8</button></div>
+                        <div class="button number" id="btn9"><button>9</button></div>
+                        <div class="button number" id="btn4"><button>4</button></div>
+                        <div class="button number" id="btn5"><button>5</button></div>
+                        <div class="button number" id="btn6"><button>6</button></div>
+                        <div class="button number" id="btn1"><button>1</button></div>
+                        <div class="button number" id="btn2"><button>2</button></div>
+                        <div class="button number" id="btn3"><button>3</button></div>
+                        <div class="button number" id="btn0"><button>0</button></div>
+                        <div class="button number" id="decimal"><button>.</button></div>
+                    </div>
+
+                    <div class="operate-grid">
+                        <div class="button operate" id="div"><button>÷</button></div>
+                        <div class="button operate" id="mul"><button>x</button></div>
+                        <div class="button operate" id="minus"><button>-</button></div>
+                        <div class="button operate" id="plus"><button>+</button></div>
+                        <div class="button operate" id="equal"><button>=</button></div>
+                    </div>
+                </div>
+            </div>
+
+            <script src="Project Scripts/calculator.js"></script>
+
+            <br>
+            <h1>Thoughts:</h1>
+            <p>
+                This is my first non web-based project.
+                A simple Calculator that can do simple calculation
+            </p>
+            <p>
+                There's not much to improve upon the project, besides finding a way to signal which operation is currently in process.
+                THAT is going to takes a while but I know there is a way to do it.
+                And also find a way to have the "minus-plus" and "percentage" do the calculation on press instead of having to press "equal"
+            </p>
+            <p>
+                Besides that it is a simple project and I know I can do better. But I'm still rather proud of it.
+            </p>
+        </div>
+    </div>
+
+<!--Wiki Searcher-->
+    <div class="container">
+        <div class="glass-container">
+            <h2>Wiki Searcher</h2>
+            <div id="Wiki-Searcher">
+                <header class="searchbar">
+                    <h3>Let's ask the Wiki</h3>
+                    <form class="search-box">
+                        <input type="search" id="search" placeholder="Search your topic here">
+                    </form>
+                    <p>Results Count: 0</p>
+                </header>
+
+                <div class="result-block"></div>
+
+                <button class="more">LOAD MORE</button>
+
+                <script src="Project Scripts/wikisearch.js"></script>
+            </div>
+
+            <br>
+            <h1>Thoughts:</h1>
+            <p>
+                This one was Surprisingly compact, it would have been just 2 function if I hadn't needed to add another button to load more.
+                That aside, this project is the first one to use another website to get the information which came out pretty good.
+            </p>
+            <p>
+                I don't have much thought on this project to be honest.
+                This one will probably don't need any more improvements, it's working as best as it can from what I can tell.
+            </p>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
